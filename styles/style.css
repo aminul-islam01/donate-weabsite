@@ -10,6 +10,8 @@ header{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    position: relative;
+    z-index: 1;
 }
 .primary-btn{
     background: #FF5959;
@@ -32,6 +34,15 @@ header{
 .banner{
     padding: 150px 150px 50px;
     text-align: center;
+}
+.linear-gradient{
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
 }
 .banner-title{
     color: #fff;
@@ -104,10 +115,11 @@ main{
 .plan-container{
     display: flex;
     gap: 20px;
+    width: 100%;
 }
 .plan-content{
     padding: 70px 30px;
-    width: 33.33%;
+    
     border-radius: 5px;
     margin: 50px 0;
 }
@@ -135,7 +147,11 @@ main{
 img{
     border-radius: 5px;
 }
-.blog{
+.blog1{
+    display: flex;
+    gap: 100px;
+}
+.blog2{
     display: flex;
     gap: 100px;
 }
@@ -193,4 +209,132 @@ footer p{
     color: #c0abab;
     padding-top: 30px;
     padding-bottom: 50px;
+}
+
+
+@media screen and (max-width:576px) {
+    header{
+        background-image: url('../images/donation9.jpg');
+    }
+    .banner{
+        padding: 20px;
+    }
+    .banner-title {
+        font-size: 35px;
+        margin: 0 0 20px 0;
+    }
+    .banner-discription{
+        margin: 0;
+        font-size: 16px;
+    }
+    .donate-today {
+        width: 100%;
+    }
+    .section-title {
+        font-size: 25px;
+        margin: 40px 10px 10px;
+    }
+    .section-discription {
+        font-size: 16px;
+        line-height: 20px;
+        margin: 20px 10px;
+    }
+    .donate-amount {
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+    .donate-amount h2 {
+        font-size: 20px;
+        padding: 40px 16px;
+        margin: 0;
+    }
+    #d-btn{
+        margin: 10px;
+    }
+    .plan-title{
+        width: 100%;
+    }
+    .plan-container{
+        flex-direction: column;
+    }
+    .plan-content{
+        margin: 0;
+    }
+    .blog1{
+        flex-direction: column;
+        gap: 0;
+    }
+    .blog2{
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+    .blog-content{
+        margin: 10px;
+    }
+    .blog-post{
+        margin-top: 0;
+    }
+    .blog-post img{
+        width: 100%;
+    }
+    .update-title {
+        width: 100%;
+    }
+    form {
+        flex-direction: column;
+        margin: 0 0 20px;
+        padding: 20px;
+    }
+    input[type=email]{
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    input[type=submit]{
+        border-radius: 5px;
+    }
+    .primary-btn{
+        margin: 10px 0 20px 10px;
+    }
+}
+
+@media screen and (min-width:577px) and (max-width:992px) {
+    .banner {
+        padding: 80px 80px 50px;
+    }
+    .banner-title {
+        font-size: 65px;
+        margin: 50px 30px;
+    }
+    .banner-discription{
+        margin: 0;
+    }
+    .plan-content {
+        margin: 50px 0 0;
+    }
+    .blog1{
+        flex-direction: column;
+        gap: 0;
+    }
+    .blog2{
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+    .blog-content{
+        margin: 20px;
+    }
+    .blog-post{
+        margin-top: 0;
+    }
+    .blog-post img{
+        width: 100%;
+    }
+    .section-title{
+        margin: 50px 20px 0;
+    }
+    .section-discription {
+        margin: 30px 20px 0;
+    }
+    .primary-btn{
+        margin: 20px 0 20px 20px;
+    }
 }
